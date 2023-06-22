@@ -5,6 +5,8 @@ vim.keymap.set("n", "<leader>xx", "<cmd>TroubleToggle<cr>",
   {silent = true, noremap = true}
 )
 
+vim.keymap.set("n", "<leader>xy", "<cmd>! python3 %<cr>")
+
 vim.keymap.set("n", "<leader>vz", function()
     vim.cmd.ZenMode()
     vim.cmd.DittoOn()

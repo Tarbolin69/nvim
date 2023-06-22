@@ -4,7 +4,8 @@ vim.opt.clipboard = 'unnamedplus'
 
 vim.api.nvim_set_hl(0, "ZenBg", { ctermbg = 0 })
 
-vim.opt.spelllang = 'en,es'
+vim.opt.spell = true
+vim.opt.spelllang = 'es'
 
 vim.opt.tabstop = 4
 vim.opt.softtabstop = 4

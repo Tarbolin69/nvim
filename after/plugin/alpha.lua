@@ -24,7 +24,7 @@ dashboard.section.header.val = {
 -- Set menu
 dashboard.section.buttons.val = {
     dashboard.button( "e", "  Nuevo archivo" , ":ene <BAR> startinsert <CR>"),
-    dashboard.button( "f", "  Encontrar projecto", ":cd $HOME/Programing| Telescope find_files<CR>"),
+    dashboard.button( "f", "  Encontrar projecto", ":cd $HOME/Programming| Telescope find_files<CR>"),
     dashboard.button( "r", "  Reciente"   , ":Telescope oldfiles<CR>"),
     dashboard.button( "s", "  Ajustes" , ":e $MYVIMRC | :cd %:p:h | split . | wincmd k | pwd<CR>"),
     dashboard.button( "q", "  Cerrar NVIM", ":qa<CR>"),
@@ -43,7 +43,7 @@ dashboard.section.buttons.val = {
 --       }
 --   end)
 --   ```
--- local fortune = require("alpha.fortune") 
+-- local fortune = require("alpha.fortune")
 -- dashboard.section.footer.val = fortune()
 
 ---- Set footer - FORTUNES

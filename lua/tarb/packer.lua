@@ -91,6 +91,7 @@ return require('packer').startup(function(use)
     }
     use ("nvim-telescope/telescope-file-browser.nvim")
     use ("cljoly/telescope-repo.nvim")
+    use ("tpope/vim-surround")
     -- Github, History & LSP
     use {
         "folke/todo-comments.nvim",
