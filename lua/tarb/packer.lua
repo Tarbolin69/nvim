@@ -12,11 +12,11 @@ return require('packer').startup(function(use)
     }
     -- Graphical and UI
     use 'nvim-tree/nvim-web-devicons'
+    use 'ap/vim-css-color'
     use "lukas-reineke/indent-blankline.nvim"
     use {"ellisonleao/glow.nvim", config = function() require("glow").setup() end}
     use {"stevearc/dressing.nvim"}
     use 'folke/tokyonight.nvim'
-    use "ap/vim-css-color"
     use('nvim-treesitter/nvim-treesitter', {run = ':TSUpdate'})
     use {
         'nvim-lualine/lualine.nvim',
@@ -76,22 +76,17 @@ return require('packer').startup(function(use)
         "preservim/vim-pencil",
         ft = {'markdown', 'html', 'tex', 'text' },
      }
-    use {
-        "dbmrq/vim-ditto",
-        ft = {'markdown', 'html', 'tex', 'text' },
-    }
-    use {"dhruvasagar/vim-table-mode"}
     use {"lervag/vimtex"}
     -- Fuzzy & Movement
     use ('theprimeagen/harpoon')
     use {
         'nvim-telescope/telescope.nvim', tag = '0.1.0',
-        -- or                            , branch = '0.1.x',
         requires = { {'nvim-lua/plenary.nvim'} }
     }
     use ("nvim-telescope/telescope-file-browser.nvim")
     use ("cljoly/telescope-repo.nvim")
     use ("tpope/vim-surround")
+    use ("christoomey/vim-tmux-navigator")
     -- Github, History & LSP
     use {
         "folke/todo-comments.nvim",
@@ -115,6 +110,7 @@ return require('packer').startup(function(use)
             }
         end
     }
+    use ('mattn/emmet-vim')
     use ('mbbill/undotree')
     use('nvim-treesitter/playground')
     use ('tpope/vim-fugitive')
@@ -125,7 +121,6 @@ return require('packer').startup(function(use)
             {'neovim/nvim-lspconfig'},
             {'williamboman/mason.nvim'},
             {'williamboman/mason-lspconfig.nvim'},
-
             -- Autocompletion
             {'hrsh7th/nvim-cmp'},
             {'hrsh7th/cmp-buffer'},
@@ -133,7 +128,6 @@ return require('packer').startup(function(use)
             {'saadparwaiz1/cmp_luasnip'},
             {'hrsh7th/cmp-nvim-lsp'},
             {'hrsh7th/cmp-nvim-lua'},
-
             -- Snippets
             {'L3MON4D3/LuaSnip'},
             {'rafamadriz/friendly-snippets'},

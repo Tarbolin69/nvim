@@ -30,8 +30,20 @@ vim.opt.scrolloff = 8
 vim.opt.signcolumn = "yes"
 vim.opt.isfname:append("@-@")
 
+vim.g.vimtex_view_general_viewer = 'zathura'
+vim.g.tex_comment_nospell = 1
+vim.g.vimtex_syntax_enabled = 0
+vim.g.vimtex_quickfix_enabled = 0
+vim.g.vimtex_compiler_progname = 'nvr'
+vim.g.vimtex_view_general_options = [[--unique file:@pdf\#src:@line@tex]]
+vim.g.vimtex_quickfix_ignore_filters = {
+  'Underfull',
+  'Overfull',
+  'Negative'
+}
+
 vim.opt.updatetime = 50
 
 vim.opt.colorcolumn = "80"
 
-vim.g.mapleader = ","
+vim.g.mapleader = " "

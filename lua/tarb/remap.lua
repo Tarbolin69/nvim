@@ -1,17 +1,17 @@
-vim.g.mapleader = ","
+vim.g.mapleader = " "
+
 vim.keymap.set("n", "<leader>pv", vim.cmd.Ex)
 
-vim.keymap.set("n", "<leader>xx", "<cmd>TroubleToggle<cr>",
+vim.keymap.set("n", "<leader>tt", "<cmd>TroubleToggle<cr>",
   {silent = true, noremap = true}
 )
 
-vim.keymap.set("n", "<leader>xy", "<cmd>! python3 %<cr>")
+vim.keymap.set("n", "<leader>py", "<cmd>! python3 %<cr>")
 
 vim.keymap.set("n", "<leader>vz", function()
     vim.cmd.ZenMode()
-    vim.cmd.DittoOn()
     vim.cmd.SoftPencil()
-    vim.opt.spell = not(vim.opt.spell:get())
+    vim.cmd.setlocal("spell spelllang=en")
 end)
 
 vim.api.nvim_set_keymap(
@@ -26,15 +26,8 @@ vim.api.nvim_create_autocmd('BufWritePre', {
   command = ":%s/\\s\\+$//e"
 })
 
-vim.api.nvim_create_autocmd('Filetype', {
-    pattern = { 'markdown' },
-    command = 'TableModeToggle'
-})
-
 vim.keymap.set("n", "<leader>lt", vim.cmd.VimtexTocToggle)
 vim.keymap.set("n", "<leader>ll", vim.cmd.VimtexCompile)
-
-vim.keymap.set("n", "<leader>z", vim.cmd.Neotree)
 
 vim.keymap.set("v", "J", ":m '>+1<CR>gv=gv")
 vim.keymap.set("v", "K", ":m '<-2<CR>gv=gv")
@@ -68,8 +61,6 @@ vim.keymap.set("n", "Q", "<nop>")
 vim.keymap.set("n", "<C-f>", "<cmd>silent !tmux neww tmux-sessionizer<CR>")
 vim.keymap.set("n", "<leader>f", vim.lsp.buf.format)
 
-vim.keymap.set("n", "<C-k>", "<cmd>cnext<CR>zz")
-vim.keymap.set("n", "<C-j>", "<cmd>cprev<CR>zz")
 vim.keymap.set("n", "<leader>k", "<cmd>lnext<CR>zz")
 vim.keymap.set("n", "<leader>j", "<cmd>lprev<CR>zz")
 
